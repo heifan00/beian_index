@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>可爱鲸鱼</title>
+    <style>
+        /*! CSS Used from: Embedded */
+        
+        .ml-auto {
+            margin-left: auto!important;
+        }
+        
+        p {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        a:active {
+            color: #f60;
+        }
+        
+        #bottom_layer {
+            width: 100%;
+            min-width: 1250px;
+            z-index: 302;
+            bottom: 0;
+            left: 0;
+            height: 40px;
+            overflow: hidden;
+            color: #999;
+            zoom: 1;
+            margin: 0;
+            background-color: #fafafa;
+            text-align: left;
+            line-height: 40px;
+        }
+        
+        #bottom_layer .lh {
+            display: inline;
+            margin-right: 20px;
+        }
+        
+        #bottom_layer .s-bottom-layer-left .lh:first-child {
+            margin-left: 30px;
+        }
+        
+        #bottom_layer .s-bottom-layer-right>.lh:last-child {
+            margin-right: 30px;
+        }
+        
+        #bottom_layer a {
+            font-size: 12px;
+            text-decoration: none;
+            color: #999;
+        }
+        
+        #bottom_layer a:hover {
+            color: #333;
+        }
+        
+        #bottom_layer .s-bottom-layer-left {
+            float: left;
+        }
+        
+        #bottom_layer .s-bottom-layer-right {
+            float: right;
+            color: #bbb;
+        }
+        
+        #bottom_layer .s-bottom-layer-right a {
+            color: #bbb;
+        }
+        
+        #bottom_layer .s-bottom-layer-right a:hover {
+            color: #333;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        /*! CSS Used from: Embedded */
+        
+        [class*=" el-icon-"] {
+            font-family: element-icons!important;
+            speak: none;
+            font-style: normal;
+            font-weight: 400;
+            font-feature-settings: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            vertical-align: baseline;
+            display: inline-block;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .el-icon-close:before {
+            content: "\e6db";
+        }
+        
+        .el-dialog {
+            position: relative;
+            margin: 0 auto 50px;
+            background: #fff;
+            border-radius: 2px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+            box-sizing: border-box;
+            width: 50%;
+        }
+        
+        .el-dialog__wrapper {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: auto;
+            margin: 0;
+        }
+        
+        .el-dialog__header {
+            padding: 20px 20px 10px;
+        }
+        
+        .el-dialog__headerbtn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 0;
+            background: 0 0;
+            border: none;
+            outline: 0;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .el-dialog__headerbtn .el-dialog__close {
+            color: #909399;
+        }
+        
+        .el-dialog__headerbtn:focus .el-dialog__close,
+        .el-dialog__headerbtn:hover .el-dialog__close {
+            color: #409eff;
+        }
+        
+        .el-dialog__title {
+            line-height: 24px;
+            font-size: 18px;
+            color: #303133;
+        }
+        
+        .el-dialog__footer {
+            padding: 10px 20px 20px;
+            text-align: right;
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        a:focus,
+        button:focus {
+            outline: 0;
+        }
+        
+        button {
+            color: inherit;
+            font: inherit;
+        }
+        /*! CSS Used from: Embedded */
+        
+        .w-r {
+            position: relative;
+            box-sizing: border-box;
+        }
+        
+        .w-r:after,
+        .w-r:before {
+            display: table;
+            content: "";
+        }
+        
+        .w-r:after {
+            clear: both;
+        }
+        
+        .w-r--flex {
+            display: flex;
+        }
+        
+        .w-r--flex:after,
+        .w-r--flex:before {
+            display: none;
+        }
+        
+        .w-r--flex.is-align-middle {
+            align-items: center;
+        }
+        
+        [class*=w-c-] {
+            float: left;
+            box-sizing: border-box;
+        }
+        
+        .w-c-2 {
+            width: 8.33333%;
+        }
+        
+        .w-c-22 {
+            width: 91.66667%;
+        }
+        
+        *,
+         :after,
+         :before {
+            box-sizing: border-box;
+        }
+        
+        main,
+        nav,
+        section {
+            display: block;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Dosis, Open Sans, pingfang SC, helvetica neue, arial, hiragino sans gb, microsoft yahei ui, microsoft yahei, simsun, sans-serif;
+            font-size: .9375rem;
+            font-weight: 400;
+            line-height: 1.9;
+            color: #3c4248;
+            text-align: left;
+            background-color: #f8fafc;
+        }
+        
+        h3,
+        h4 {
+            margin-top: 0;
+            margin-bottom: .5rem;
+        }
+        
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        
+        a {
+            color: inherit;
+            background-color: transparent;
+        }
+        
+        a,
+        a:hover {
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: #50a1ff;
+        }
+        
+        img {
+            border-style: none;
+        }
+        
+        img,
+        svg {
+            vertical-align: middle;
+        }
+        
+        svg {
+            overflow: hidden;
+        }
+        
+        button {
+            border-radius: 0;
+        }
+        
+        button:focus {
+            outline: 1px dotted;
+            outline: 5px auto -webkit-focus-ring-color;
+        }
+        
+        button {
+            margin: 0;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+        }
+        
+        button {
+            overflow: visible;
+        }
+        
+        button {
+            text-transform: none;
+        }
+        
+        [type=button],
+        button {
+            -webkit-appearance: button;
+        }
+        
+        [type=button]::-moz-focus-inner,
+        button::-moz-focus-inner {
+            padding: 0;
+            border-style: none;
+        }
+        
+        .btn {
+            display: inline-block;
+            font-weight: 600;
+            color: #3c4248;
+            text-align: center;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-color: transparent;
+            border: 1px solid transparent;
+            letter-spacing: 1.7px;
+            text-transform: uppercase;
+            padding: .3rem 26px .375rem;
+            font-size: .9375rem;
+            line-height: 1.9;
+            border-radius: .25rem;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            outline: none;
+        }
+        
+        .btn:hover {
+            color: #3c4248;
+            text-decoration: none;
+        }
+        
+        .btn:focus {
+            outline: 0;
+            box-shadow: none;
+        }
+        
+        .btn:disabled {
+            opacity: .65;
+        }
+        
+        .btn-primary {
+            color: #fff;
+            background-color: #50a1ff;
+            border-color: #50a1ff;
+        }
+        
+        .btn-primary:hover {
+            background-color: #3c96ff;
+            border-color: #3c96ff;
+        }
+        
+        .btn-primary:focus,
+        .btn-primary:hover {
+            color: #fff;
+            box-shadow: 0 1px 10px rgba(80, 161, 255, .4);
+        }
+        
+        .btn-primary:disabled {
+            background-color: #50a1ff;
+            border-color: #50a1ff;
+        }
+        
+        .btn-primary:not([disabled]):not(.disabled):active {
+            color: #fff;
+            background-color: #278bff;
+            border-color: #278bff;
+            box-shadow: 0 1px 10px rgba(80, 161, 255, .4);
+        }
+        
+        button:focus {
+            outline: none;
+        }
+        
+        .btn-round {
+            border-radius: 10rem;
+        }
+        
+        .nav .nav-link {
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: .9375rem;
+            word-spacing: 2px;
+            padding: .625rem 1rem;
+            color: #757575;
+            transition: all .2s ease-in-out;
+        }
+        
+        .nav .nav-link:hover {
+            color: #50a1ff;
+        }
+        
+        .container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 768px;
+        }
+        
+        @media (min-width:768px) {
+            .container {
+                max-width: 1200px;
+            }
+        }
+        
+        @media (min-width:1200px) {
+            .container {
+                max-width: 1440px;
+            }
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+        
+        .col-5,
+        .col-6 {
+            position: relative;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        
+        .col-5 {
+            margin-left: 77px!important;
+            flex: 0 0 41.66667%;
+            max-width: 41.66667%;
+        }
+        
+        .col-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        
+        .order-first {
+            order: -1;
+        }
+        
+        body {
+            min-width: 1240px;
+            padding-top: 2.5rem;
+        }
+        
+        .layout-min-full-height {
+            min-height: calc(100vh - 178px)!important;
+        }
+        
+        .clearfix:after {
+            display: block;
+            clear: both;
+            content: "";
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .avatar-40 {
+            width: 40px!important;
+            height: 40px!important;
+            line-height: 40px!important;
+            font-size: 20px;
+        }
+        
+        .no-shadow {
+            box-shadow: none!important;
+        }
+        
+         ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        
+         ::-webkit-scrollbar-thumb {
+            border-radius: 8px;
+            background: rgba(2, 3, 3, .09);
+        }
+        
+         ::-webkit-scrollbar-track {
+            background: hsla(210, 8%, 51%, .09);
+        }
+        
+        .h-150 {
+            height: 150px!important;
+        }
+        
+        .fs-16 {
+            font-size: 16px!important;
+        }
+        
+        .fs-30 {
+            font-size: 30px!important;
+        }
+        
+        .avatar {
+            position: relative;
+            line-height: 1;
+            white-space: nowrap;
+            font-weight: 700;
+            border-radius: 500px;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .mb-0 {
+            margin-bottom: 0!important;
+        }
+        
+        .mb-10 {
+            margin-bottom: 10px!important;
+        }
+        
+        .mr-10 {
+            margin-right: 10px!important;
+        }
+        
+        .px-15 {
+            padding-right: 15px!important;
+        }
+        
+        .px-15 {
+            padding-left: 15px!important;
+        }
+        
+        .mb-20 {
+            margin-bottom: 20px!important;
+        }
+        
+        .mr-30 {
+            margin-right: 30px!important;
+        }
+        
+        .pr-30,
+        .px-30 {
+            padding-right: 30px!important;
+        }
+        
+        .px-30 {
+            padding-left: 30px!important;
+        }
+        
+        .px-40 {
+            padding-right: 40px!important;
+        }
+        
+        .px-40 {
+            padding-left: 40px!important;
+        }
+        
+        .pt-80 {
+            padding-top: 80px!important;
+        }
+        
+        .pb-100 {
+            padding-bottom: 100px!important;
+        }
+        
+        .align-items-center {
+            align-items: center!important;
+        }
+        
+        .flex-grow {
+            flex: 1;
+        }
+        
+        .overflow-hidden {
+            overflow: hidden!important;
+        }
+        
+        .h5,
+        h3,
+        h4 {
+            font-family: Dosis, Open Sans, pingfang SC, -apple-system, Helvetica Neue, Helvetica, Arial, PingFang SC, PingFang TC, Hiragino Sans GB, Microsoft Yahei, Microsoft Jhenghei, sans-serif;
+        }
+        
+        .h5,
+        h3,
+        h4 {
+            margin-bottom: .5rem;
+            line-height: 1.5;
+            color: #323d47;
+            letter-spacing: .5px;
+        }
+        
+        h3 {
+            font-size: 1.75781rem;
+        }
+        
+        @media (max-width:1200px) {
+            h3 {
+                font-size: calc(1.30078rem + .60938vw);
+            }
+        }
+        
+        h4 {
+            font-size: 1.52344rem;
+        }
+        
+        @media (max-width:1200px) {
+            h4 {
+                font-size: calc(1.27734rem + .32812vw);
+            }
+        }
+        
+        .h5 {
+            font-size: 1.23047rem;
+        }
+        
+        .h5,
+        h3,
+        h4 {
+            font-weight: 400;
+        }
+        
+        .fs-16 {
+            font-size: 16px!important;
+        }
+        
+        .fw-400 {
+            font-weight: 400!important;
+        }
+        
+        .text-center {
+            text-align: center!important;
+        }
+        
+        .soft-blockquote {
+            position: relative;
+            border-left: 0;
+            text-indent: 38px;
+            padding: 65px 0 50px;
+            width: 700px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 2;
+            color: #979b9e;
+        }
+        
+        .soft-blockquote:before {
+            content: "";
+            display: block;
+            opacity: 1;
+            position: absolute;
+            left: calc(50% - 32px);
+            top: -10px;
+            width: 64px;
+            height: 64px;
+            background-image: /*savepage-url=https://cdn.macwk.com/assets/images/svg/icon35.svg*/
+            var(--savepage-url-38);
+            background-repeat: no-repeat;
+            background-position: 0;
+            background-size: 90%;
+        }
+        
+        .b-b {
+            border-bottom: 1px solid hsla(210, 8%, 51%, .09);
+        }
+        
+        .no-radius {
+            border-radius: 0!important;
+        }
+        
+        .white {
+            background-color: #fff;
+        }
+        
+        .no-bg {
+            background: transparent!important;
+        }
+        
+        .fiexd-download-bar {
+            position: fixed;
+            top: -60px;
+            opacity: 0;
+            box-shadow: none;
+        }
+        
+        .soft-layout {
+            box-shadow: 0 16px 48px #e7ebf6;
+            background-color: #fff;
+            width: 1350px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .features-title {
+            font-weight: 300;
+            font-family: Dosis, Open Sans, -apple-system, Arial, Microsoft Yahei, Microsoft Jhenghei, sans-serif;
+        }
+        
+        .layout-content-infos {
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            padding: 80px 0 100px;
+            background-image: linear-gradient(135deg, #f4f7fe, #fff 50%, #f4f7fe);
+            position: relative;
+        }
+        
+        .layout-content-infos .soft-markdown-content p {
+            color: #979b9e;
+            font-size: 16px;
+        }
+        
+        .soft-layout .layout-content-infos {
+            border-top: 0;
+            border-bottom: 0;
+            background-image: linear-gradient(135deg, #f4f7fe, #fff 50%, #f4f7fe);
+        }
+        
+        .circle-fill {
+            fill: #c6fdf3;
+        }
+        
+        .path-fill {
+            fill: #55ebd0;
+        }
+        
+        .path-fill-1 {
+            fill: #1adab7;
+        }
+        
+        .el-dialog__headerbtn {
+            position: fixed;
+            top: -20px;
+            right: 20px;
+            font-size: 130px;
+        }
+        
+        .el-dialog__headerbtn .el-dialog__close {
+            color: #fff;
+        }
+        
+        @media (max-width:1439.98px) {
+            .container {
+                max-width: 1240px;
+            }
+            .soft-layout {
+                width: 1210px;
+            }
+            .soft-layout .container {
+                max-width: 1040px;
+            }
+            .content-header h3 {
+                font-size: 1.5rem;
+            }
+            .content-header svg {
+                width: 70px;
+                height: 60px;
+            }
+        }
+        
+        @media (min-width:1440px) {
+            .container {
+                max-width: 1440px;
+            }
+            .soft-layout {
+                width: 1410px;
+            }
+            .soft-layout .container {
+                max-width: 1240px;
+            }
+        }
+        
+        @media (max-width:767.98px) {
+            body {
+                min-width: 100%;
+                padding-top: 0;
+            }
+        }
+        
+        .d-flex {
+            display: flex!important;
+        }
+        
+        .adBanner {
+            background-color: transparent;
+            height: 1px;
+            width: 1px;
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body class="vsc-initialized">
+    <div id="__nuxt">
+        <!---->
+        <div id="__layout">
+            <div id="inspire" class="app">
+                <main class="layout-min-full-height">
+                    <div class="overflow-hidden pb-100">
+
+                        <div class="soft-layout">
+                            <section class="layout-content">
+                                <!---->
+                                <div id="step-content" class="layout-content-infos">
+                                    <div class="container">
+                                        <div class="content-header">
+                                            <div class="h-150 w-r is-align-middle w-r--flex">
+                                                <div class="w-c w-c-2"><svg width="80" height="70" viewBox="0 0 125 107" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle cx="48" cy="59" r="48" class="circle-fill"></circle> <path d="M58.536 39.713c0-6.884 1.72-14.007 5.163-21.368 3.443-7.36 8.167-13.458 14.173-18.292l11.645 7.91c-3.589 4.98-6.262 10.016-8.02 15.106S78.86 33.598 78.86 39.384v13.623H58.536V39.713z" class="path-fill"></path> <path d="M93.252 39.713c0-6.884 1.722-14.007 5.164-21.368 3.442-7.36 8.166-13.458 14.172-18.292l11.646 7.91c-3.589 4.98-6.262 10.016-8.02 15.106s-2.637 10.529-2.637 16.315v13.623H93.252V39.713z" class="path-fill-1"></path></g></svg></div>
+                                                <div class="w-c w-c-22">
+                                                    <h3>
+                                                        随笔随想/最新记录：
+
+                                                        <!---->
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="soft-blockquote fw-400">
+                                                <div>
+                                                    <p>生活总是酸甜苦辣，有好有坏的，我们不知道明天会发生什么，但是我们可以认真的过好今天，期待明天，偶尔回忆昨天.....
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="row gap-y align-items-center pt-80 pb-100 b-b mb-20">
+                                                <div class="col-5 ml-auto">
+                                                    <div class="pr-30">
+                                                        <h4 class="features-title fs-30 mb-10">饭后遛弯儿所想</h4>
+                                                        <div class="soft-markdown-content">
+                                                            <p>天气有点闷热，太阳不太大，甚至有点阴阴的感觉。坐在空调房里。写着自己也不知到的乱七八糟的东西。妹妹在旁边玩着五子棋子。笔记本刚刚传出电量不足的提醒。然后我就果断的插上了插头。可能有种即将失去什么的预感。哈哈，刚刚在智联上面投了简历，应不住家里催促，也毕竟在家躺尸这么久了，总得拿出个态度来看看，才不显得那么废柴。</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 order-first">
+                                                    <h4 class="features-title fs-30 mb-10">2020-03-03</h4>
+                                                </div>
+                                            </div> -->
+                                            <div class="row gap-y align-items-center pt-80 pb-100 b-b mb-20">
+                                                <div class="col-5 ml-auto">
+                                                    <div class="pr-30">
+                                                        <h4 class="features-title fs-30 mb-10">饭后遛弯儿所想</h4>
+                                                        <div class="soft-markdown-content">
+                                                            <p>天气有点闷热，太阳不太大，甚至有点阴阴的感觉。坐在空调房里。写着自己也不知到的乱七八糟的东西。妹妹在旁边玩着五子棋子。笔记本刚刚传出电量不足的提醒。然后我就果断的插上了插头。可能有种即将失去什么的预感。哈哈，刚刚在智联上面投了简历，应不住家里催促，也毕竟在家躺尸这么久了，总得拿出个态度来看看，才不显得那么废柴。</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h4 class="features-title fs-30 mb-10">不知的乱七八糟的东西</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row gap-y align-items-center pt-80 pb-100 b-b mb-20">
+                                                <div class="col-5 ml-auto">
+                                                    <div class="pr-30">
+                                                        <h4 class="features-title fs-30 mb-10">今天的风</h4>
+                                                        <div class="soft-markdown-content">
+                                                            <p>今天的风<br />让人猝不及防但又不得不去拥抱<br />一个人走到终点<br />犯困的双眼疲倦的达拉着<br />无神的看着窗外的车水马龙<br />好想就这样开到天荒地老<br />转念一想生活还是忙碌的好<br />这样才能感觉自己真实的存在着<br />我没有什么大本事 也不想高飞</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h4 class="features-title fs-30 mb-10">让人猝不及防但又不得不去拥抱</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row gap-y align-items-center pt-80 pb-100 b-b mb-20">
+                                                <div class="col-5 ml-auto">
+                                                    <div class="pr-30">
+                                                        <h4 class="features-title fs-30 mb-10">超市换钱记</h4>
+                                                        <div class="soft-markdown-content">
+                                                            <p>走过了人来车往，我自以为自己可以做好一切的，结果还是搞砸了，心塞塞的，是不是我今天出门没看黄历，还是这个月我星座水逆。<br/>已经累到不想说话了，明明是我出门的时候是带了的呀，怎么搞的，又不见了，这个月已经是第三次掉钱了。<br/>难道我终究摆脱不了这个厄运了，每个礼拜三都掉钱，要死啊，每次还掉十几块，出门去个超市都能掉钱，也是醉了，刚碰上这个超市又不支持支付宝跟微信。 <br/>这年头，你还只能用现金付，能不能跟上点时代发展的潮流啊，大哥，人家马云都在开24小时超市了好嘛，小心你以后饭碗不保啊，大哥。
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h4 class="features-title fs-30 mb-10">还是这个月我星座水逆</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row gap-y align-items-center pt-80 pb-100 b-b mb-20">
+                                                <div class="col-5 ml-auto">
+                                                    <div class="pr-30">
+                                                        <h4 class="features-title fs-30 mb-10">我的工作经历</h4>
+                                                        <div class="soft-markdown-content">
+                                                            <p>时间像一场有去无回的旅行，过去的只能被缅怀，听人说，好汉不提当年勇，能提的，只能说你自己活的不胜过去吧！谁说呢？风水轮流转嘛！<br/>别人所羡慕的美好生活，在自己看来可能不值一提！而自己最痛恨的自由散漫，可能是别人最尤为羡慕的。正因为我们所缺失的，才成为别人羡慕的。得不到的永远是最好的，当得到了其实也就那么回事儿，我不知道别人是怎么想的，反正我是这么想的。<br/>没有更新，不是我没有没有时间，换句话说就是懒。前段时间应聘了一份工作。是在本地的一份工作。说句实在话，我不知道如何形容。
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h4 class="features-title fs-30 mb-10">时间像一场有去无回的旅行，过去的只能被缅怀</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!---->
+                                    </div>
+                                </div>
+                        </div>
+                        <div id="step-relations" class="clearfix white"></div>
+                        </section>
+                    </div>
+                    <div class="el-dialog__wrapper text-center" style="display: none;">
+                        <div role="dialog" aria-modal="true" aria-label="dialog" class="el-dialog no-bg no-shadow" style="margin-top: 15vh; width: 1300px;">
+                            <div class="el-dialog__header"><span class="el-dialog__title"></span><button type="button" aria-label="Close" class="el-dialog__headerbtn"><i class="el-dialog__close el-icon el-icon-close"></i></button></div>
+                            <!---->
+                            <!---->
+                        </div>
+                    </div>
+                    <!---->
+                   
+            </div>
+            </main>
+            <div id="bottom_layer" class="s-bottom-layer" style="">
+                <div class="s-bottom-layer-left">
+
+                </div>
+                <div id="s-bottom-layer-right" class="s-bottom-layer-right"><span class="lh">©2020&nbsp;可爱鲸鱼&nbsp;</span>
+                    <a class="lh" href="https://beian.miit.gov.cn/" target="_blank">豫ICP备2021032631号-1</a>
+                </div>
+            </div>
+            <div>
+                <div class="adBanner ad-185"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+</body>
+        
+</html>
